@@ -1,0 +1,47 @@
+{% load humanize %}
+
+<html>
+<body>
+<ul>
+{% for post in post_list %}
+    <li>{{ post.headline|title }}</li>
+    <span>{{ post.pub_date|timesince }} ago</span>
+    <span> {{ post.rating|apnumber }} </span>
+
+    {# incomma
+        4500 -> 4,500
+    #}
+
+    {# intword
+        1000000 -> 1 Millon 
+    #}
+
+    {# naturalday
+        16 feb 2019 -> Yesterday, today, tomorrow
+    #}
+
+    {# naturaltime 
+        16 feb 2019 -> 4 minutos, 10 segundos atras
+    #}
+
+    {# ordinal
+        1 -> 1ro
+        2 -> 2do
+        3 -> 3ro
+    #}
+{% endfor %}
+
+
+{% if request.user.is_authenticated %}
+authenticated
+{% else %}
+not authenticated
+{% endif %}
+
+
+
+{{ newVariable }}
+
+</ul>
+</body>
+</html>
