@@ -14,7 +14,7 @@ def mi_funcion():
         saludo = 'Como estas '
         name = 'Angie '
         last = 'del Bosque '
-class        print ('n2 '+saludo+name)
+        print ('n2 '+saludo+name)
     mi_segunda_funcion()
 print(saludo+name+ last)
 mi_funcion()
